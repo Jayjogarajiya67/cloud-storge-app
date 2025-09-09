@@ -1,0 +1,58 @@
+Simple Cloud Storage App
+
+An example of a simple file manager with the ability to exchange files between a remote server and a client. Supports drag-and-drop actions, simple authorization and sing up functions. The server implements the netty framework 4.1.51.
+
+See client.properties and server.properties files to configure the app
+
+
+
+1.Building
+
+Prerequisites:
+Java (oracle jdk) 8.
+Installation guide for Arch linux : here, but you should download java 8 version
+
+2.Build
+Go to the project root and run
+    ./mvnw package
+
+3.Open client/target and server/target folder and run "jar-with-dependencies.jar" files by using console. For example:
+    ...clint/target$ java -jar client-1.0-jar-with-dependencies.jar
+
+
+
+*Docker
+You can run the server in docker
+Install Docker on the machine you want to run it.
+Go to project root and run the commands below by using console
+
+
+    $docker build -t java-app:cloud .
+    $docker run java-app:cloud -p 8190:8190/tcp
+        
+    Or just pull it from repository
+    $docker pull vzvz4/java-app:cloud
+    And run it
+    $docker run -p 8190:8190/tcp vzvz4/java-app:cloud
+
+
+
+
+🚀 Key Features
+
+✅ Upload and download files via web interface
+
+📁 List all uploaded files in a neat dashboard
+
+🗑️ Delete files with one click
+
+📦 Runs inside a Docker container
+
+🎨 Responsive UI with custom CSS styling
+
+🔐 Basic file size/type validation on upload
+
+
+
+
+

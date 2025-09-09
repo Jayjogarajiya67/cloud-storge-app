@@ -1,0 +1,10 @@
+.idea
+/client/target
+/server/clients_folders/
+/client/Cloud Storage downloads/
+/server/target
+/network/target
+/server/out
+/server/log/
+*.iml
+*.log
